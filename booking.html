@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Flight Ticket Booking</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+
+    <div class="logo">✈️ TravelGo</div>
+
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="places.html">Places</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</nav>
+<h1 align="center">✈️ Flight Ticket Booking</h1>
+
+<form>
+
+    <fieldset>
+        <legend><b>Passenger Details</b></legend>
+
+        <label>Full Name:</label><br>
+        <input type="text"
+               name="fullname"
+               oninput="this.value=this.value.replace(/[^a-zA-Z ]/g,'')"
+               required>
+        <br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required>
+        <br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password" required>
+        <br><br>
+
+        <label>Phone Number:</label><br>
+        <input type="text"
+               id="phone"
+               maxlength="10"
+               oninput="validatePhone()"
+               required>
+        <br>
+        <span id="error" style="color:red;"></span>
+        <br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><b>Flight Details</b></legend>
+
+        <label>From:</label><br>
+        <input type="text"
+               name="from"
+               oninput="this.value=this.value.replace(/[^a-zA-Z ]/g,'')"
+               required>
+        <br><br>
+
+        <label>To:</label><br>
+        <input type="text"
+               name="to"
+               oninput="this.value=this.value.replace(/[^a-zA-Z ]/g,'')"
+               required>
+        <br><br>
+
+        <label>Departure Date:</label><br>
+        <input type="date" name="departure" required>
+        <br><br>
+
+        <label>Return Date:</label><br>
+        <input type="date" name="return">
+        <br><br>
+
+        <label>Class:</label><br>
+        <select name="class">
+            <option>Economy</option>
+            <option>Premium Economy</option>
+            <option>Business</option>
+            <option>First Class</option>
+        </select>
+        <br><br>
+
+        <label>Number of Passengers:</label><br>
+        <input type="number" name="passengers" min="1" max="10" value="1">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><b>Additional Services</b></legend>
+
+        <input type="checkbox" name="meal"> Meal Preference <br>
+        <input type="checkbox" name="baggage"> Extra Baggage <br>
+        <input type="checkbox" name="insurance"> Travel Insurance
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="Book Ticket">
+    <input type="reset" value="Clear Form">
+
+</form>
+
+<script>
+function validatePhone() {
+    let phone = document.getElementById("phone");
+    let error = document.getElementById("error");
+
+    // Allow only numbers
+    phone.value = phone.value.replace(/\D/g, "");
+
+    if (phone.value.length > 0 && phone.value.length != 10) {
+        error.textContent = "Phone number must be exactly 10 digits.";
+    } else {
+        error.textContent = "";
+    }
+}
+</script>
+
+</body>
+</html>

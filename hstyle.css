@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f8fc;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav {
+    height: 75px;
+    background: #001b5e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+.links a:hover {
+    color: #29b6f6;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 650px;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 55, 140, 0.85),
+            rgba(0, 90, 180, 0.25)
+        ),
+        url("travel2.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 9%;
+}
+
+
+/* Hero Text */
+
+.hero-text {
+    color: white;
+    animation: moveText 2s ease;
+}
+
+.hero-text h4 {
+    color: #29d3ff;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.hero-text h1 span {
+    color: #29c7ff;
+}
+
+.hero-text p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* Book Button */
+
+.book-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 18px 30px;
+    background: #159cf5;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.book-btn:hover {
+    background: #0075d1;
+}
+
+
+/* ================= ANIMATION ================= */
+
+@keyframes moveText {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    width: 85%;
+    margin: -65px auto 0;
+    background: white;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    position: relative;
+}
+
+
+.feature {
+    display: flex;
+    align-items: center;
+    width: 24%;
+    padding: 10px;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+
+    background: #1976d2;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-right: 15px;
+}
+
+.feature h3 {
+    margin: 0;
+    color: #061b55;
+}
+
+.feature p {
+    margin-top: 8px;
+    color: #53658a;
+    line-height: 1.4;
+}
+
+
+/* ================= DESTINATION ================= */
+
+.destination {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.destination p {
+    color: #1976d2;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.destination h2 {
+    color: #071b52;
+    font-size: 38px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .links {
+        margin-top: 15px;
+    }
+
+    .links a {
+        margin: 8px;
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 550px;
+        padding: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .features {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .feature {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
