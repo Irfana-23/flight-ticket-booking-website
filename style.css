@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f5faff);
+    color: #333;
+}
+
+/* Main Heading */
+h1 {
+    color: #0d47a1;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+/* Form Container */
+form {
+    width: 80%;
+    max-width: 850px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Fieldsets */
+fieldset {
+    border: 2px solid #2196f3;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #fafdff;
+}
+
+/* Legend */
+legend {
+    color: #0d47a1;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Text, Email, Password, Date, Number Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+/* Input Focus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #2196f3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+    margin: 10px 5px 10px 10px;
+    accent-color: #1976d2;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    margin: 10px 8px 10px 0;
+    accent-color: #1976d2;
+}
+
+/* Error Message */
+#error {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Submit and Reset Buttons */
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Book Ticket Button */
+input[type="submit"] {
+    background-color: #1976d2;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #0d47a1;
+}
+
+/* Clear Button */
+input[type="reset"] {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+input[type="reset"]:hover {
+    background-color: #bdbdbd;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+/* Navigation Bar */
+
+.navbar {
+    background-color: #0d47a1;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #90caf9;
+}
